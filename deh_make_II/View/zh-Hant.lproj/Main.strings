@@ -1,0 +1,279 @@
+
+/* Class = "UILabel"; text = "類型："; ObjectID = "4CH-gT-eq6"; */
+"4CH-gT-eq6.text" = "類型：";
+
+/* Class = "UITextField"; placeholder = "點擊定位取得所在位置"; ObjectID = "4Eh-Mg-Xe6"; */
+"4Eh-Mg-Xe6.placeholder" = "點擊定位取得所在位置";
+
+/* Class = "UILabel"; text = "主題："; ObjectID = "4KO-Pu-p8o"; */
+"4KO-Pu-p8o.text" = "主題：";
+
+/* Class = "UITextField"; placeholder = "請選擇景點主題"; ObjectID = "7yP-it-GaJ"; */
+"7yP-it-GaJ.placeholder" = "請選擇景點主題";
+
+/* Class = "UITextField"; placeholder = "請填入名稱"; ObjectID = "8mU-DI-140"; */
+"8mU-DI-140.placeholder" = "請填入名稱";
+
+/* Class = "UILabel"; text = "緯度："; ObjectID = "92W-5j-1ry"; */
+"92W-5j-1ry.text" = "緯度：";
+
+/* Class = "UITextField"; placeholder = "請輸入景點描述內容"; ObjectID = "BoA-eU-ttB"; */
+"BoA-eU-ttB.placeholder" = "請輸入景點描述內容";
+
+/* Class = "UIButton"; normalTitle = "登入"; ObjectID = "CUV-sb-WHw"; */
+"CUV-sb-WHw.normalTitle" = "登入";
+
+/* Class = "UITextField"; placeholder = "請選擇景點類型"; ObjectID = "Cve-so-RDB"; */
+"Cve-so-RDB.placeholder" = "請選擇景點類型";
+
+/* Class = "UITextField"; placeholder = "請輸入景點描述內容"; ObjectID = "Cyl-Mj-eH7"; */
+"Cyl-Mj-eH7.placeholder" = "請輸入景點描述內容";
+
+/* Class = "UILabel"; text = "景點描述："; ObjectID = "DPS-9j-MPD"; */
+"DPS-9j-MPD.text" = "景點描述：";
+
+/* Class = "UITextField"; placeholder = "請選擇景點範疇"; ObjectID = "EDX-vh-SO2"; */
+"EDX-vh-SO2.placeholder" = "請選擇景點範疇";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "EKx-ni-cWG"; */
+"EKx-ni-cWG.text" = "Title";
+
+/* Class = "UILabel"; text = "景點描述："; ObjectID = "Exi-xd-DpO"; */
+"Exi-xd-DpO.text" = "景點描述：";
+
+/* Class = "UILabel"; text = "緯度："; ObjectID = "FPY-iY-bkO"; */
+"FPY-iY-bkO.text" = "緯度：";
+
+/* Class = "UILabel"; text = "關鍵字："; ObjectID = "GAM-en-kbc"; */
+"GAM-en-kbc.text" = "關鍵字：";
+
+/* Class = "UITextField"; placeholder = "請填入名稱"; ObjectID = "GF3-QY-dBa"; */
+"GF3-QY-dBa.placeholder" = "請填入名稱";
+
+/* Class = "UITextField"; placeholder = "請填入名稱"; ObjectID = "GQE-iB-vFP"; */
+"GQE-iB-vFP.placeholder" = "請填入名稱";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "HqH-8S-4OA"; */
+"HqH-8S-4OA.title" = "Item";
+
+/* Class = "UILabel"; text = "範疇："; ObjectID = "IAR-w9-Vlx"; */
+"IAR-w9-Vlx.text" = "範疇：";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "IaR-YO-Orw"; */
+"IaR-YO-Orw.text" = "Title";
+
+/* Class = "UILabel"; text = "主題："; ObjectID = "J4d-0W-uMA"; */
+"J4d-0W-uMA.text" = "主題：";
+
+/* Class = "UIButton"; normalTitle = "註冊"; ObjectID = "LrB-Nr-iUb"; */
+"LrB-Nr-iUb.normalTitle" = "註冊";
+
+/* Class = "UITextField"; placeholder = "請輸入景點關鍵字"; ObjectID = "MDK-LW-WIA"; */
+"MDK-LW-WIA.placeholder" = "請輸入景點關鍵字";
+
+/* Class = "UILabel"; text = "範疇："; ObjectID = "Mce-3f-p6q"; */
+"Mce-3f-p6q.text" = "範疇：";
+
+/* Class = "UIButton"; normalTitle = "播放解說"; ObjectID = "MvL-Wc-rfO"; */
+"MvL-Wc-rfO.normalTitle" = "播放解說";
+
+/* Class = "UITextField"; placeholder = "請選擇景點主題"; ObjectID = "Nlf-kE-5qd"; */
+"Nlf-kE-5qd.placeholder" = "請選擇景點主題";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "QCH-0j-ZKl"; */
+"QCH-0j-ZKl.text" = "Subtitle";
+
+/* Class = "UIButton"; normalTitle = "播放聲音"; ObjectID = "QRG-xu-r85"; */
+"QRG-xu-r85.normalTitle" = "播放聲音";
+
+/* Class = "UIBarButtonItem"; title = "Image"; ObjectID = "QpR-GB-mOM"; */
+"QpR-GB-mOM.title" = "Image";
+
+/* Class = "UIButton"; normalTitle = "播放影片"; ObjectID = "QrI-FP-y41"; */
+"QrI-FP-y41.normalTitle" = "播放影片";
+
+/* Class = "UILabel"; text = "類型："; ObjectID = "R8o-li-lXc"; */
+"R8o-li-lXc.text" = "類型：";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "SWo-6W-6Xz"; */
+"SWo-6W-6Xz.title" = "Item";
+
+/* Class = "UILabel"; text = "名稱："; ObjectID = "Skg-DQ-dmC"; */
+"Skg-DQ-dmC.text" = "名稱：";
+
+/* Class = "UILabel"; text = "經度："; ObjectID = "T0V-gm-at2"; */
+"T0V-gm-at2.text" = "經度：";
+
+/* Class = "UIBarButtonItem"; title = "Voice"; ObjectID = "TSm-L8-pCL"; */
+"TSm-L8-pCL.title" = "Voice";
+
+/* Class = "UITextField"; placeholder = "請輸入景點關鍵字"; ObjectID = "ULe-kO-Rbf"; */
+"ULe-kO-Rbf.placeholder" = "請輸入景點關鍵字";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "UcR-ww-4Ip"; */
+"UcR-ww-4Ip.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "POI List"; ObjectID = "WqH-Cy-got"; */
+"WqH-Cy-got.title" = "景點列表";
+
+/* Class = "UITextField"; placeholder = "請選擇景點範疇"; ObjectID = "WsI-3c-oSx"; */
+"WsI-3c-oSx.placeholder" = "請選擇景點範疇";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "XNC-Ra-j3D"; */
+"XNC-Ra-j3D.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Zqh-65-cZg"; */
+"Zqh-65-cZg.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "a5g-Zw-zOK"; */
+"a5g-Zw-zOK.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "請輸入景點描述內容"; ObjectID = "a6V-Pw-mnb"; */
+"a6V-Pw-mnb.placeholder" = "請輸入景點描述內容";
+
+/* Class = "UILabel"; text = "經度："; ObjectID = "aIL-Ai-6om"; */
+"aIL-Ai-6om.text" = "經度：";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "aav-YY-n6L"; */
+"aav-YY-n6L.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "經度："; ObjectID = "bWA-FU-AlC"; */
+"bWA-FU-AlC.text" = "經度：";
+
+/* Class = "UILabel"; text = "類型："; ObjectID = "c9H-4d-Vuo"; */
+"c9H-4d-Vuo.text" = "類型：";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "cE8-gn-sCc"; */
+"cE8-gn-sCc.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Video"; ObjectID = "dbJ-Ve-SIc"; */
+"dbJ-Ve-SIc.title" = "Video";
+
+/* Class = "UITextField"; placeholder = "請選擇景點類型"; ObjectID = "ddR-Yu-z7T"; */
+"ddR-Yu-z7T.placeholder" = "請選擇景點類型";
+
+/* Class = "UITextField"; placeholder = "請選擇景點主題"; ObjectID = "e1T-c8-H5v"; */
+"e1T-c8-H5v.placeholder" = "請選擇景點主題";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "eml-YD-f1f"; */
+"eml-YD-f1f.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "播放解說"; ObjectID = "ewD-8d-ibN"; */
+"ewD-8d-ibN.normalTitle" = "播放解說";
+
+/* Class = "UIButton"; normalTitle = "播放解說"; ObjectID = "Tb6-Ya-mkd"; */
+"Tb6-Ya-mkd.normalTitle" = "播放解說";
+
+/* Class = "UILabel"; text = "帳號 : "; ObjectID = "f9A-PR-1kJ"; */
+"f9A-PR-1kJ.text" = "帳號 : ";
+
+/* Class = "UIViewController"; title = "Voice POI"; ObjectID = "igC-hh-9bD"; */
+"igC-hh-9bD.title" = "聲音景點";
+
+/* Class = "UILabel"; text = "範疇："; ObjectID = "jwv-An-vFM"; */
+"jwv-An-vFM.text" = "範疇：";
+
+/* Class = "UITextField"; placeholder = "請輸入景點關鍵字"; ObjectID = "kA8-fv-fKY"; */
+"kA8-fv-fKY.placeholder" = "請輸入景點關鍵字";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "lh9-IZ-WjO"; */
+"lh9-IZ-WjO.text" = "Title";
+
+/* Class = "UITextField"; placeholder = "請選擇景點範疇"; ObjectID = "lr3-uC-UMX"; */
+"lr3-uC-UMX.placeholder" = "請選擇景點範疇";
+
+/* Class = "UILabel"; text = "緯度："; ObjectID = "mZ1-Sl-SMN"; */
+"mZ1-Sl-SMN.text" = "緯度：";
+
+/* Class = "UILabel"; text = "主題："; ObjectID = "n8V-py-Soy"; */
+"n8V-py-Soy.text" = "主題：";
+
+/* Class = "UILabel"; text = "名稱："; ObjectID = "nij-S9-ad9"; */
+"nij-S9-ad9.text" = "名稱：";
+
+/* Class = "UIBarButtonItem"; title = "User info"; ObjectID = "oed-pk-bZD"; */
+"oed-pk-bZD.title" = "User info";
+
+/* Class = "UIViewController"; title = "Vedio POI"; ObjectID = "p8c-vs-s6g"; */
+"p8c-vs-s6g.title" = "影片景點";
+
+/* Class = "UITextField"; placeholder = "請選擇景點類型"; ObjectID = "pxz-dO-WRv"; */
+"pxz-dO-WRv.placeholder" = "請選擇景點類型";
+
+/* Class = "UITextField"; placeholder = "點擊定位取得所在位置"; ObjectID = "r2D-ZW-Ysu"; */
+"r2D-ZW-Ysu.placeholder" = "點擊定位取得所在位置";
+
+/* Class = "UITextField"; placeholder = "點擊定位取得所在位置"; ObjectID = "NWM-ie-shA"; */
+"NWM-ie-shA.placeholder" = "點擊定位取得所在位置";
+
+/* Class = "UITextField"; placeholder = "點擊定位取得所在位置"; ObjectID = "gED-ce-Gap"; */
+"gED-ce-Gap.placeholder" = "點擊定位取得所在位置";
+
+/* Class = "UITextField"; placeholder = "點擊定位取得所在位置"; ObjectID = "hpA-u4-4zW"; */
+"hpA-u4-4zW.placeholder" = "點擊定位取得所在位置";
+
+/* Class = "UITextField"; placeholder = "點擊定位取得所在位置"; ObjectID = "tfk-7g-yIE"; */
+"tfk-7g-yIE.placeholder" = "點擊定位取得所在位置";
+
+/* Class = "UITextField"; placeholder = "選擇加入群組"; ObjectID = "CDH-70-q8K"; */
+"CDH-70-q8K.placeholder" = "選擇加入群組";
+
+/* Class = "UITextField"; placeholder = "選擇加入群組"; ObjectID = "IDD-Zf-tvW"; */
+"IDD-Zf-tvW.placeholder" = "選擇加入群組";
+
+/* Class = "UITextField"; placeholder = "選擇加入群組"; ObjectID = "6G0-3G-vh8"; */
+"6G0-3G-vh8.placeholder" = "選擇加入群組";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "sVZ-J2-Dn0"; */
+"sVZ-J2-Dn0.title" = "Item";
+
+/* Class = "UILabel"; text = "/"; ObjectID = "tnY-xr-zxE"; */
+"tnY-xr-zxE.text" = "/";
+
+/* Class = "UIViewController"; title = "Image POI"; ObjectID = "ttD-gh-omZ"; */
+"ttD-gh-omZ.title" = "圖片景點";
+
+/* Class = "UILabel"; text = "名稱："; ObjectID = "uwj-Se-yJl"; */
+"uwj-Se-yJl.text" = "名稱：";
+
+/* Class = "UILabel"; text = "圖片預覽"; ObjectID = "vBm-Ka-ajD"; */
+"vBm-Ka-ajD.text" = "圖片預覽";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "vpB-2R-Fqf"; */
+"vpB-2R-Fqf.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "vqp-Wi-TEK"; */
+"vqp-Wi-TEK.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "播放解說"; ObjectID = "w4R-83-ZZh"; */
+"w4R-83-ZZh.normalTitle" = "播放解說";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "wbb-pU-eQl"; */
+"wbb-pU-eQl.text" = "Subtitle";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "xBV-lI-N8r"; */
+"xBV-lI-N8r.title" = "Item";
+
+/* Class = "UILabel"; text = "關鍵字："; ObjectID = "yhW-cg-lBg"; */
+"yhW-cg-lBg.text" = "關鍵字：";
+
+/* Class = "UILabel"; text = "群組："; ObjectID = "kal-23-klp"; */
+"kal-23-klp.text" = "群組：";
+
+/* Class = "UILabel"; text = "群組："; ObjectID = "iaU-FV-HhL"; */
+"iaU-FV-HhL.text" = "群組：";
+
+/* Class = "UILabel"; text = "群組："; ObjectID = "Vt6-zK-WO9"; */
+"Vt6-zK-WO9.text" = "群組：";
+
+/* Class = "UILabel"; text = "關鍵字："; ObjectID = "yyI-wI-3BM"; */
+"yyI-wI-3BM.text" = "關鍵字：";
+
+/* Class = "UILabel"; text = "密碼 : "; ObjectID = "z0b-b3-fVf"; */
+"z0b-b3-fVf.text" = "密碼 : ";
+
+/* Class = "UILabel"; text = "景點描述："; ObjectID = "z7m-5f-RpD"; */
+"z7m-5f-RpD.text" = "景點描述：";
+
+/* Class = "UIViewController"; title = "My Information"; ObjectID = "zBL-Nn-kIQ"; */
+"zBL-Nn-kIQ.title" = "個人資訊";

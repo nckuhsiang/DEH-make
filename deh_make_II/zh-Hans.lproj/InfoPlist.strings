@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  UItest1010
+
+  Created by Ray Chen on 2017/12/14.
+  Copyright © 2017年 Ray Chen. All rights reserved.
+*/
+
+"NSCameraUsageDescription" = "制作一个兴趣点需要使用图像（视频），我们可以用你的相机吗？";
+"NSPhotoLibraryUsageDescription" = "制作一个兴趣点需要使用图片（视频），我们可以使用你的相册吗？";
+"NSLocationWhenInUseUsageDescription" = "制作兴趣点需要使用位置，我们可以得到你的位置？";
+"NSMicrophoneUsageDescription" = "制作POI将需要使用景点声音(解说)，能让我们使用你的麦克风吗？";

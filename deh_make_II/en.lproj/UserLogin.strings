@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "CUV-sb-WHw"; */
+"CUV-sb-WHw.normalTitle" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "LrB-Nr-iUb"; */
+"LrB-Nr-iUb.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Username:"; ObjectID = "f9A-PR-1kJ"; */
+"f9A-PR-1kJ.text" = "Username:";
+
+/* Class = "UILabel"; text = "Password:"; ObjectID = "z0b-b3-fVf"; */
+"z0b-b3-fVf.text" = "Password:";
+
+/* Class = "UIViewController"; title = "My Information"; ObjectID = "zBL-Nn-kIQ"; */
+"zBL-Nn-kIQ.title" = "My Information";

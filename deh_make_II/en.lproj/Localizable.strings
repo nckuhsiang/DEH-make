@@ -1,0 +1,134 @@
+/* 
+  Localizable.strings
+  UItest1010
+
+  Created by Ray Chen on 2017/11/14.
+  Copyright © 2017年 Ray Chen. All rights reserved.
+*/
+
+/* POI List Page */
+"Upload" = "Upload";
+"Delete" = "Delete";
+"Image" = "Image";
+"Audio" = "Audio";
+"Video" = "Video";
+"Upload Failed!" = "Upload Failed";
+"Please inshare your network is connected" = "Please inshare your network is connected";
+"File Uploaded!" = "File Uploaded";
+"Keep it up" = "Keep it up";
+"Uploading..." = "Uploading...";
+"Login Error!" = "Login Error!";
+"Please login" = "Please login";
+"Share to friends" = "Share to friends";
+"Share" = "Share";
+"Done" = "Done";
+
+/* POI User Login Page */
+"Username:" = "Username:";
+"Password:" = "Password:";
+"Register" = "Register";
+"Login" = "Login";
+"Logout" = "Logout";
+"Login Success" = "Login Success";
+"Welcome back" = "Welcome back";
+"Login Fail" = "Login Fail";
+"Please enter the correct account and password" = "Please enter the correct account and password";
+"Choose the organization to which your attraction belongs" = "Choose the organization to which your attraction belongs";
+"If you switch the attraction, you will log out of the current account." = "If you switch the attraction, you will log out of the current account.";
+
+/* Group management Page */
+"Leader" = "Leader";
+"Member" = "Member";
+"Group Name" = "Group Name";
+"Myself" = "Myself";
+"JOIN" = "JOIN";
+"Edit" = "Edit";
+"Creat" = "Creat";
+"Save" = "Save";
+"Success" = "Success";
+"Save success" = "Save success";
+"Member List" = "Member List";
+"Please enter the group name for you want to join!" = "Please enter the group name for you want to join!";
+"invited you to join" = " invited you to join ";
+"apply to join" = " apply to join ";
+"The group is not exist!" = "The group is not exist!";
+"Can not send request for yourself!" = "Can not send request for yourself!";
+"You already in the group!" = "You already in the group!";
+"Administrator has invited members!" = "Administrator has invited members!";
+"You have allocated request!" = "You have allocated request!";
+"Send request successfully!" = "Send request successfully!";
+"Already in group!" = "Already in group!";
+"Without this person!" = "Without this person!";
+"Already invite!" = "Already invite!";
+"Invite success!" = "Invite success!";
+"Information" = "Information";
+"Creat Group successed" = "Creat Group successed";
+"Creat Group failed" = "Creat Group failed";
+
+/* POI Insert Page */
+"Positioning..." = "Positioning...";
+"Please wait a moment" = "Please wait a moment";
+"Warn" = "Warn";
+"Please complete the location information first" = "Please complete the location information first";
+"Reached the maximum number of pictures" = "Reached the maximum number of pictures";
+"Image source" = "Image source";
+"Please select the access method" = "Please select the access method";
+"Camera" = "Camera";
+"Album" = "Album";
+"Cancel" = "Cancel";
+"Please complete the location informatio" = "Please complete the location informatio";
+"Record attractions explanation" = "Record attractions explanation";
+"Record the voice of the attractions" = "Record the voice of the attractions";
+"It will stop automatically after recording 150 seconds\nClick OK to finish" = "It will stop automatically after recording 150 seconds\nClick OK to finish";
+"Information Error" = "Information Error";
+"Please fill all the fields" = "Please fill all the fields";
+"Have not joined the picture" = "Have not joined the picture";
+"Successfully modified" = "Successfully modified";
+"Save successfully" = "Save successfully";
+"Continue to add the next POI" = "Continue to add the next POI";
+"The tour is playing" = "The tour is playing";
+"Click OK to stop playing" = "Click OK to stop playing";
+"Not recorded" = "Not recorded";
+"Please record and listen again" = "Please record and listen again";
+"Delet success!" = "Delet success!";
+"Not video" = "Not video";
+"Please record and then play" = "Please record and then play";
+"Have not joined the audio" = "Have not joined the audio";
+"Your location" = "Your location";
+"longitude" = "longitude";
+"latitude" = "latitude";
+"Please fill the correct position" = "Please fill the correct position";
+"Our App need the location service.\nTo change the permissions, go to Settings> DEH Make II> Location Services ON!" = "Our App need the location service.\nTo change the permissions, go to Settings> DEH Make II> Location Services ON!";
+
+/* Picker */
+"Experiential" = "Experiential";
+"Activation and Reconstructed" = "Activation and Reconstructed";
+"Disappear" = "Disappear";
+"Natural Landscape" = "Natural Landscape";
+"Human Landscape" = "Human Landscape";
+"Event" = "Event";
+"Industry" = "Industry";
+"Historical Site, Historical Building, Village" = "Historical Site, Historical Building, Village";
+"Ruins" = "Ruins";
+"Culture Landscape" = "Culture Landscape";
+"Traditional Art" = "Traditional Art";
+"Folk Customs and Relevant Culture Artifacts" = "Folk Customs and Relevant Culture Artifacts";
+"Antique" = "Antique";
+"Food and Drink, Lodging, Transportation, Infotainment" = "Food and Drink, Lodging, Transportation, Infotainment";
+"Other" = "Other";
+
+/* Page View */
+"DEH Make's Homepage" = "DEH Make's Homepage";
+"User login screen" = "User login screen";
+"Make Image POI" = "Make Image POI";
+"Make Audio POI" = "Make Audio POI";
+"Make Movie POI" = "Make Movie POI";
+"Attractions temporary list" = "Attractions temporary list";
+"Attractions upload operation" = "Attractions upload operation";
+"This is our homepage!\nYou can enter the login screen from the top right corner keys\nAlso, you can enter the scenic spots from below" = "This is our homepage!\nYou can enter the login screen from the top right corner keys\nAlso, you can enter the scenic spots from below";
+"Log in to your account\nPlace your attraction into your account." = "Log in to your account\nPlace your attraction into your account.";
+"Make your own photo POI\nIf you want to explain the content can also be voice assisted" = "Make your own photo POI\nIf you want to explain the content can also be voice assisted";
+"Make your own audio POI\nIf you want to explain the content can also be voice assisted" = "Make your own audio POI\nIf you want to explain the content can also be voice assisted";
+"Make your own video POI\nIf you want to explain the content can also voice assistance" = "Make your own video POI\nIf you want to explain the content can also voice assistance";
+"The POI will be displayed in the list when they are finished\nPlease wait for your later edits and uploads" = "The POI will be displayed in the list when they are finished\nPlease wait for your later edits and uploads";
+"Silence the action you want\nSwipe left to upload and delete" = "Silence the action you want\nSwipe left to upload and delete";

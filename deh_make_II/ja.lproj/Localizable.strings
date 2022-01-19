@@ -1,0 +1,135 @@
+/* 
+  Localizable.strings
+  UItest1010
+
+  Created by Ray Chen on 2017/11/14.
+  Copyright © 2017年 Ray Chen. All rights reserved.
+*/
+
+/* POI List Page */
+"Upload" = "アップロード";
+"Delete" = "削除";
+"Image" = "イメージ";
+"Audio" = "オーディオ";
+"Video" = "ビデオ";
+"Upload Failed!" = "アップロードに失敗しました";
+"Please inshare your network is connected" = "ネットワークが接続されていることを確認してください";
+"File Uploaded" = "アップロードされたファイル";
+"Keep it up" = "がんばり続ける";
+"Uploading..." = "アップロード中...";
+"Login Error!" = "ログインエラー！";
+"Please login" = "ログインしてください";
+"Share to friends" = "分享到社群";
+"Share" = "分享";
+"Done" = "結束";
+
+/* POI User Login Page */
+"Username:" = "ユーザー名：";
+"Password:" = "パスワード：";
+"Register" = "登録";
+"Login" = "ログイン";
+"Logout" = "ログアウト";
+"Login Success" = "ログインの成功";
+"Welcome back" = "お帰りなさい";
+"Login Fail" = "ログイン失敗";
+"Please enter the correct account and password" = "正しいアカウントとパスワードを入力してください";
+"Choose the organization to which your attraction belongs" = "あなたのアトラクションが属する組織を選択してください";
+"If you switch the attraction, you will log out of the current account." = "アトラクションを切り替えると、現在のアカウントからログアウトします。";
+
+/* POI Insert Page */
+"Positioning..." = "ポジショニング...";
+"Please wait a moment" = "お待ちください";
+"Warn" = "警告する";
+"Please complete the location information first" = "最初に位置情報を入力してください";
+"Reached the maximum number of pictures" = "最大枚数に達しました";
+"Image source" = "画像ソース";
+"Please select the access method" = "アクセス方法を選択してください";
+"Camera" = "カメラ";
+"Album" = "アルバム";
+"Cancel" = "キャンセル";
+"Please complete the location informatio" = "位置情報を入力してください";
+"Record attractions explanation" = "アトラクションの説明を記録する";
+"Record the voice of the attractions" = "アトラクションの声を録音する";
+"It will stop automatically after recording 150 seconds\nClick OK to finish" = "150秒を記録すると自動的に停止します。 \ n [OK]をクリックして終了します。";
+"Information Error" = "情報の誤り";
+"Please fill all the fields" = "すべてのフィールドを入力してください";
+"Successfully modified" = "正常に変更されました";
+"Save successfully" = "成功した保存";
+"Continue to add the next POI" = "次のPOIを追加し続ける";
+"The tour is playing" = "ツアーは遊んでいる";
+"Click OK to stop playing" = "OKをクリックして再生を停止する";
+"Not recorded" = "記録されていない";
+"Please record and listen again" = "もう一度録音して聞いてください";
+"Delet success!" = "成功を削除！";
+"Not video" = "ビデオではない";
+"Please record and then play" = "録音してから再生してください";
+"Have not joined the picture" = "写真に参加していない";
+"Have not joined the audio" = "聲音に参加していない";
+"Have not joined the vedio" = "影片に参加していない";
+"Your location" = "あなたの場所";
+"longitude" = "経度";
+"latitude" = "緯度";
+"Please fill the correct position" = "正しい位置を記入してください";
+"Our App need the location service.\nTo change the permissions, go to Settings> DEH Make II> Location Services ON!" = "私たちのアプリケーションには位置情報サービスが必要です。\n権限を変更するには、設定> DEH Make II>位置情報サービス";
+
+/* Group management Page */
+"Leader" = "管理員";
+"Member" = "成員";
+"Group Name" = "群組名稱";
+"Myself" = "屬於自己";
+"JOIN" = "申請加入";
+"Edit" = "編輯";
+"Creat" = "建立";
+"Save" = "儲存";
+"Success" = "成功";
+"Save success" = "儲存成功";
+"Member List" = "成員列表";
+"Please enter the group name for you want to join!" = "請輸入您想加入的群組名稱!";
+"invited you to join" = " 邀請您加入 ";
+"apply to join" = " 申請加入 ";
+"The group is not exist!" = "此群組不存在!";
+"Can not send request for yourself!" = "你已在群組中！";
+"You already in the group!" = "你已在群組中！";
+"Administrator has invited members!" = "已邀請此成員";
+"You have allocated request!" = "你已收到此群組的邀請!";
+"Send request successfully!" = "發送申請成功!";
+"Already in group!" = "此用戶已在群組中!";
+"Without this person!" = "此用戶不存在!";
+"Already invite!" = "已邀請此用戶加入群組!";
+"Invite success!" = "邀請成功!";
+"Information" = "訊息提醒";
+"Creat Group successed" = "群組建立成功";
+"Creat Group failed" = "群組建立失敗";
+
+/* Picker */
+"Experiential" = "経験";
+"Activation and Reconstructed" = "アクティベーションと再構築";
+"Disappear" = "姿を消す";
+"Natural Landscape" = "自然の風景";
+"Human Landscape" = "人間の風景";
+"Event" = "イベント";
+"Industry" = "産業";
+"Historical Site, Historical Building, Village" = "史跡、歴史的建造物、村";
+"Ruins" = "遺跡";
+"Culture Landscape" = "文化的景観";
+"Traditional Art" = "伝統芸術";
+"Folk Customs and Relevant Culture Artifacts" = "民俗習慣と関連文化遺物";
+"Antique" = "アンティーク";
+"Food and Drink, Lodging, Transportation, Infotainment" = "飲食、宿泊、交通、インフォテイメント";
+"Other" = "その他";
+
+/* Page View */
+"DEH Make's Homepage" = "DEH Makeのホームページ";
+"User login screen" = "ユーザログイン画面";
+"Make Image POI" = "イメージPOIを作る";
+"Make Audio POI" = "サウンドPOIの制作";
+"Make Movie POI" = "映画POI制作";
+"Attractions temporary list" = "アトラクション一時一覧";
+"Attractions upload operation" = "POIアップロード操作";
+"This is our homepage!\nYou can enter the login screen from the top right corner keys\nAlso, you can enter the scenic spots from below" = "これは私たちのホームページです！\n右上隅のキーからログイン画面に入ることができます\nまた";
+"Log in to your account\nPlace your attraction into your account." = "あなたのアカウントにログインしてください。\nあなたのアトラクションをあなたのアカウントに入れてください。";
+"Make your own photo POI\nIf you want to explain the content can also be voice assisted" = "自分のスポットを作成する\n観光スポットの写真を追加する\nコンテンツを説明したい場合は、音声でも可能です";
+"Make your own audio POI\nIf you want to explain the content can also be voice assisted" = "あなた自身のスポットを作成する\nここにアトラクションを追加\nコンテンツを説明したい場合は、音声でも可能です";
+"Make your own video POI\nIf you want to explain the content can also voice assistance" = "あなた自身のアトラクションを作成する\nアトラクションのビデオを追加する\nコンテンツを説明したい場合は";
+"The POI will be displayed in the list when they are finished\nPlease wait for your later edits and uploads" = "POIが完了したらリストに表示されます。\n後で編集やアップロードを待つようにしてください";
+"Silence the action you want\nSwipe left to upload and delete" = "あなたが望むアクションを沈黙させる\nアップロードして削除するために左にスワイプする";

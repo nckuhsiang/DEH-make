@@ -1,0 +1,141 @@
+/* 
+  Localizable.strings
+  UItest1010
+
+  Created by Ray Chen on 2017/11/14.
+  Copyright © 2017年 Ray Chen. All rights reserved.
+*/
+
+/* POI List Page */
+"Upload" = "上传";
+"Delete" = "删除";
+"POI List" = "景点列表";
+"Image" = "图片";
+"Audio" = "声音";
+"Video" = "影片";
+"Upload Failed" = "上传失败";
+"Please inshare your network is connected" = "请检查网路再重新上传";
+"File Uploaded" = "上传成功";
+"Keep it up" = "继续努力探访";
+"Uploading..." = "上传中...";
+"Login Error!" = "尚未登入!";
+"Please login" = "请先登入帐号再上传POI";
+"Share to friends" = "分享到社群";
+"Share" = "分享";
+"Done" = "结束";
+
+/* POI User Login Page */
+"My Information" = "個人資訊";
+"Username:" = "帳號:";
+"Password:" = "密碼:";
+"Register" = "註冊";
+"Login" = "登入";
+"Logout" = "登出";
+"Login Success" = "登入成功";
+"Welcome back" = "歡迎回來";
+"Login Fail" = "登入失敗";
+"Please enter the correct account and password" = "請輸入正確的帳號和密碼";
+"Choose the organization to which your attraction belongs" = "选择您景点要归属的组织";
+"If you switch the attraction, you will log out of the current account." = "若切换景点归属会登出目前帐号";
+
+/* POI Insert Page */
+"Positioning..." = "定位中...";
+"Please wait a moment" = "請稍待片刻";
+"Warn" = "提醒";
+"Please complete the location information first" = "請先填妥位置資訊";
+"Reached the maximum number of pictures" = "已達圖片最大數量";
+"Image source" = "影像來源";
+"Please select the access method" = "請選擇取用方式";
+"Camera" = "相機";
+"Album" = "相片庫";
+"Cancel" = "取消";
+"Please complete the location informatio" = "請先填妥位置資訊";
+"Record attractions explanation" = "景點解說錄製中";
+"Record the voice of the attractions" = "景點聲音錄製中";
+"It will stop automatically after recording 150 seconds\nClick OK to finish" = "最長時間不超過2分30秒\n點擊OK結束錄音";
+"Information Error" = "資料錯誤";
+"Please fill all the fields" = "有欄位尚未填寫";
+"Have not joined the picture" = "尚未加入圖片";
+"Have not joined the vedio" = "尚未加入影片";
+"Successfully modified" = "修改成功";
+"Save successfully" = "儲存成功";
+"Continue to add the next POI" = "繼續新增下一筆POI";
+"The tour is playing" = "解說播放中";
+"The audio is playing" = "聲音播放中";
+"Click OK to stop playing" = "點擊OK停止播放";
+"Not recorded" = "尚未錄音";
+"Not video" = "尚未錄影";
+"Please record and listen again" = "請先錄音再來聽聽看喔";
+"Please record and then play" = "請先錄再播放";
+"Delet success!" = "刪除成功";
+"Rear camera does not exist" = "後置相機不存在";
+"The camera can not be used" = "相機無法使用";
+"Unable to access Camera" = "無法取用相機";
+"Have not joined the audio" = "尚未加入聲音";
+"Your location" = "你的位置";
+"longitude" = "經度";
+"latitude" = "緯度";
+"Please fill the correct position" = "請輸入正確的位置資訊";
+"Our App need the location service.\nTo change the permissions, go to Settings> DEH Make II> Location Services ON!" = "我們的服務需要定位功能.\n如要變更權限，請至 設定 > DEH Make II > 定位服務 開啟";
+
+/* Group management Page */
+"Leader" = "管理員";
+"Member" = "成員";
+"Group Name" = "群組名稱";
+"Myself" = "屬於自己";
+"JOIN" = "申請加入";
+"Edit" = "編輯";
+"Creat" = "建立";
+"Save" = "儲存";
+"Success" = "成功";
+"Save success" = "儲存成功";
+"Member List" = "成員列表";
+"Please enter the group name for you want to join!" = "請輸入您想加入的群組名稱!";
+"invited you to join" = " 邀請您加入 ";
+"apply to join" = " 申請加入 ";
+"The group is not exist!" = "此群組不存在!";
+"Can not send request for yourself!" = "你已在群組中！";
+"You already in the group!" = "你已在群組中！";
+"Administrator has invited members!" = "已邀請此成員";
+"You have allocated request!" = "你已收到此群組的邀請!";
+"Send request successfully!" = "發送申請成功!";
+"Already in group!" = "此用戶已在群組中!";
+"Without this person!" = "此用戶不存在!";
+"Already invite!" = "已邀請此用戶加入群組!";
+"Invite success!" = "邀請成功!";
+"Information" = "訊息提醒";
+"Creat Group successed" = "群組建立成功";
+"Creat Group failed" = "群組建立失敗";
+
+/* Picker */
+"Experiential" = "體驗的";
+"Activation and Reconstructed" = "活化與再造的";
+"Disappear" = "消逝的";
+"Natural Landscape" = "自然景觀";
+"Human Landscape" = "人文景觀";
+"Event" = "事件";
+"Industry" = "產業";
+"Historical Site, Historical Building, Village" = "古蹟、歷史建築、聚落";
+"Ruins" = "遺址";
+"Culture Landscape" = "文化景觀";
+"Traditional Art" = "傳統藝術";
+"Folk Customs and Relevant Culture Artifacts" = "民俗及有關文物";
+"Antique" = "古物";
+"Food and Drink, Lodging, Transportation, Infotainment" = "食衣住行育樂";
+"Other" = "其他";
+
+/* Page View */
+"DEH Make's Homepage" = "DEH Make的首頁";
+"User login screen" = "使用者的登入畫面";
+"Make Image POI" = "圖片景點製作";
+"Make Audio POI" = "聲音景點製作";
+"Make Movie POI" = "影片景點製作";
+"Attractions temporary list" = "景點暫存列表";
+"Attractions upload operation" = "景點上傳操作";
+"This is our homepage!\nYou can enter the login screen from the top right corner keys\nAlso, you can enter the scenic spots from below" = "這邊是我們的首頁喔\n你可以從右上角的按鍵進入登入畫面\n也可以從下方進入景點製作";
+"Log in to your account\nPlace your attraction into your account." = "登入自己的帳號\n將製作的景點歸屬到自己的帳號之中";
+"Make your own photo POI\nIf you want to explain the content can also be voice assisted" = "製作屬於你自己的景點\n在之中加入景點圖片\n如有想加以解說的內容也可以語音輔助";
+"Make your own audio POI\nIf you want to explain the content can also be voice assisted" = "製作屬於你自己的景點\n在之中加入景點聲音\n如有想加以解說的內容也可以語音輔助";
+"Make your own video POI\nIf you want to explain the content can also voice assistance" = "製作屬於你自己的景點\n在之中加入景點影片\n如有想加以解說的內容也可以語音輔助";
+"The POI will be displayed in the list when they are finished\nPlease wait for your later edits and uploads" = "景點製作完成後都會顯示在列表之中\n等待你之後的編輯與上傳";
+"Silence the action you want\nSwipe left to upload and delete" = "對著想進行動作的景點\n向左邊滑動便可以進行上傳以及刪除";

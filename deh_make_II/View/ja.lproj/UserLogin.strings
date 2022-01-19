@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "CUV-sb-WHw"; */
+"CUV-sb-WHw.normalTitle" = "ログイン";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "LrB-Nr-iUb"; */
+"LrB-Nr-iUb.normalTitle" = "登録";
+
+/* Class = "UIViewController"; title = "My Information"; ObjectID = "zBL-Nn-kIQ"; */
+"zBL-Nn-kIQ.title" = "個人情報";
+
+/* Class = "UITextField"; placeholder = "帳號"; ObjectID = "u9C-BS-eOM"; */
+"u9C-BS-eOM.placeholder" = "口座番号";
+
+/* Class = "UITextField"; placeholder = "密碼"; ObjectID = "bao-wk-vh8"; */
+"bao-wk-vh8.placeholder" = "パスワード";
+
+/* Class = "UIButton"; normalTitle = "More..."; ObjectID = "QzW-92-SYb"; */
+"QzW-92-SYb.normalTitle" = "もっと...";
+
+/* Class = "UIButton"; normalTitle = "Organization"; ObjectID = "rUJ-w6-A95"; */
+"rUJ-w6-A95.normalTitle" = "組織";
+
+/* Class = "UIButton"; normalTitle = "Instructions for use"; ObjectID = "O0G-iZ-UuB"; */
+"O0G-iZ-UuB.normalTitle" = "使用方法";

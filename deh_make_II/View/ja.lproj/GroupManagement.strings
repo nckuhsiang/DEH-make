@@ -1,0 +1,66 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "3ZZ-sq-cFC"; */
+"3ZZ-sq-cFC.text" = "Title";
+
+/* Class = "UITextField"; placeholder = "Group Name"; ObjectID = "DF8-AK-WI9"; */
+"DF8-AK-WI9.placeholder" = "Group Name";
+
+/* Class = "UITextField"; placeholder = "User name"; ObjectID = "JBx-QQ-jdo"; */
+"JBx-QQ-jdo.placeholder" = "User name";
+
+/* Class = "UILabel"; text = "Group Name："; ObjectID = "MaG-AH-vAX"; */
+"MaG-AH-vAX.text" = "Group Name：";
+
+/* Class = "UIButton"; normalTitle = "Creat Group"; ObjectID = "N4k-YZ-h1E"; */
+"N4k-YZ-h1E.normalTitle" = "Creat Group";
+
+/* Class = "UIViewController"; title = "Group Information"; ObjectID = "Rum-0i-2HU"; */
+"Rum-0i-2HU.title" = "Group Information";
+
+/* Class = "UITabBarItem"; title = "Information"; ObjectID = "UP3-Bf-k0E"; */
+"UP3-Bf-k0E.title" = "Information";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "Urr-Ki-kon"; */
+"Urr-Ki-kon.normalTitle" = "Update";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Vje-ni-Jyv"; */
+"Vje-ni-Jyv.text" = "Subtitle";
+
+/* Class = "UITextField"; placeholder = "Group Infomation"; ObjectID = "Vkb-cm-j7r"; */
+"Vkb-cm-j7r.placeholder" = "Group Infomation";
+
+/* Class = "UITabBarController"; title = "Group Management"; ObjectID = "VmD-Ei-VME"; */
+"VmD-Ei-VME.title" = "Group Management";
+
+/* Class = "UIViewController"; title = "Member Managerment"; ObjectID = "YkL-lV-Gnh"; */
+"YkL-lV-Gnh.title" = "Member Managerment";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "YmG-bC-C0Q"; */
+"YmG-bC-C0Q.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "ZFL-Cz-YaB"; */
+"ZFL-Cz-YaB.title" = "Back";
+
+/* Class = "UITabBarItem"; title = "Member"; ObjectID = "cAe-xS-415"; */
+"cAe-xS-415.title" = "Member";
+
+/* Class = "UILabel"; text = "Invite："; ObjectID = "ciT-9u-7XG"; */
+"ciT-9u-7XG.text" = "Invite：";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "ePX-k3-242"; */
+"ePX-k3-242.text" = "Title";
+
+/* Class = "UIViewController"; title = "Group List"; ObjectID = "hpW-n2-lDS"; */
+"hpW-n2-lDS.title" = "Group List";
+
+/* Class = "UINavigationItem"; title = "Group List"; ObjectID = "psx-cA-4GZ"; */
+"psx-cA-4GZ.title" = "Group List";
+
+/* Class = "UILabel"; text = "Information："; ObjectID = "rPS-5X-lhe"; */
+"rPS-5X-lhe.text" = "Information：";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ugF-Fh-eNn"; */
+"ugF-Fh-eNn.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "zua-Tx-In5"; */
+"zua-Tx-In5.text" = "Title";

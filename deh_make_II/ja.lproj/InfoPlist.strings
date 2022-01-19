@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  UItest1010
+
+  Created by Ray Chen on 2017/12/14.
+  Copyright © 2017年 Ray Chen. All rights reserved.
+*/
+
+"NSCameraUsageDescription" = "POIを作成するにはイメージ（vedio）を使用する必要があります。";
+"NSLocationWhenInUseUsageDescription" = "近くのPOIを取得したい、私たちはあなたの立場を得ることができますか？";
+"NSMicrophoneUsageDescription" = "POIを作成するには音声を使用する必要があります。マイクを使用することはできますか？";
+"NSPhotoLibraryUsageDescription" = "POIを作成するにはイメージ（vedio）を使用する必要があります。あなたのフォトアルバムを使用することはできますか？";
