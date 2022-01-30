@@ -13,6 +13,12 @@ import SwiftyJSON
 class GroupMessageTableViewController: UITableViewController {
     var item2: messageClass!
     var itemSource2 : [messageClass] = []
+    let parameters = [
+    "username": UserDefaults.standard.value(forKey: "username") as? String ?? "",
+    "language": UserDefaults.standard.value(forKey: "language") as? String ?? "",
+    "coi_name": UserDefaults.standard.value(forKey: "COIname") as? String ?? ""]
+
+    
     
     @IBOutlet var groupMessageListTable: UITableView!
     
@@ -33,14 +39,14 @@ class GroupMessageTableViewController: UITableViewController {
             json = JSON("")
         }
         //var json = JSON(data: "{}".data(using: String.Encoding.utf8)!)
-        json["username"] = JSON(Rights)
+        json["username"] = JSON(parameters["username"] ?? "")
         let parameters = ["notification": json.description ]
         Alamofire.request(GroupGetNotifiUrl, method: .post, parameters: parameters).responseJSON{ response in
             print("Get Group Message. Request!")
             
             if let value: AnyObject = response.result.value as AnyObject? {
                 let post = JSON(value)
-                print(post)
+//                print(post)
                 let message = post["message"]
                 if message == "have notification" {
                     let result = post["result"].array ?? []
@@ -141,7 +147,7 @@ class GroupMessageTableViewController: UITableViewController {
         }
         
         json["sender_name"] = JSON(itemSource2[ndxPath.row].sender_name)
-        json["receiver_name"] = JSON(Rights)
+        json["receiver_name"] = JSON(parameters["username"] ?? "")
         json["group_id"] = JSON(itemSource2[ndxPath.row].group_id)
         json["message_type"] = JSON(returnAction)
         let parameters = ["group_message_info": json.description ]
@@ -168,3 +174,4 @@ class GroupMessageTableViewController: UITableViewController {
         }
     }
 }
+

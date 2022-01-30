@@ -10,13 +10,18 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
+//MARK:- 若要使用groupManage 需要設定username / language / coiname
+
 class GroupListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var db :SQLiteConnect?
     var item: GroupClass!
     var item2: messageClass!
     var itemSource : [GroupClass] = []
     var itemSource2 : [messageClass] = []
-    let parameters = ["username": Rights, "language": LanguageChange, "coi_name": COIname]
+    let parameters = [
+        "username": UserDefaults.standard.value(forKey: "username") as? String ?? "",
+        "language": UserDefaults.standard.value(forKey: "language") as? String ?? "",
+        "coi_name": UserDefaults.standard.value(forKey: "COIname") as? String ?? ""]
     let messageController = UIAlertController(title: NSLocalizedString("Warn", comment: ""), message: NSLocalizedString("Message sanding!", comment: ""), preferredStyle: .alert)
     
     @IBOutlet weak var groupListTableView: UITableView!
@@ -74,7 +79,7 @@ class GroupListViewController: UIViewController, UITableViewDataSource, UITableV
 //        alertController.addAction(confirm)
 //        present(alertController, animated: true, completion: nil)
 //    }
-    
+//
 //    func memberApplyMessage(_ groupName: String) {
 //        var alertController = UIAlertController(title: nil, message: "", preferredStyle: .alert)
 //        var json: JSON
@@ -130,7 +135,7 @@ class GroupListViewController: UIViewController, UITableViewDataSource, UITableV
             json = JSON("")
         }
         
-        json["username"] = JSON(Rights)
+        json["username"] = JSON(parameters["username"] ?? "")
         let parameters = ["notification": json.description ]
         Alamofire.request(GroupGetNotifiUrl, method: .post, parameters: parameters).responseJSON{ response in
             print("Get Group Message. Request!")

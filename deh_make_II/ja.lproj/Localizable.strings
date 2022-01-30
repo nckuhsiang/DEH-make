@@ -1,6 +1,6 @@
 /* 
   Localizable.strings
-  UItest1010
+  DEH-Make-II
 
   Created by Ray Chen on 2017/11/14.
   Copyright © 2017年 Ray Chen. All rights reserved.
@@ -78,6 +78,8 @@
 "Group Name" = "群組名稱";
 "Myself" = "屬於自己";
 "JOIN" = "申請加入";
+"Join" = "申請加入";
+"Yes" = "同意";
 "Edit" = "編輯";
 "Creat" = "建立";
 "Save" = "儲存";

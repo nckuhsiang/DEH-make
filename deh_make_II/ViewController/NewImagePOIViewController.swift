@@ -1,6 +1,6 @@
 //
 //  NewImagePOIViewController.swift
-//  UItest1010
+//  DEH-Make-II
 //
 //  Created by Ray Chen on 2017/10/11.
 //  Copyright © 2017年 Ray Chen. All rights reserved.
@@ -79,36 +79,8 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        //MARK:- 似乎沒有實際作用，已註解
         
-        let geoCoder = CLGeocoder()
-        let currentLocation = CLLocation(
-            latitude: (latitudeTextField.text! as NSString).doubleValue,
-            longitude: (longitudeTextField.text! as NSString).doubleValue
-        )
-        
-        geoCoder.reverseGeocodeLocation(
-            currentLocation, completionHandler: {
-                (placemarks, error) -> Void in
-                if error != nil {
-                    print("ERROR")
-                    return
-                }
-                /*  name            街道地址
-                 *  country         國家
-                 *  province        省籍
-                 *  locality        城市
-                 *  sublocality     縣市、區
-                 *  route           街道、路名
-                 *  streetNumber    門牌號碼
-                 *  postalCode      郵遞區號
-                 */
-                if placemarks != nil && (placemarks?.count)! > 0{
-                    let placeMark = placemarks?[0].name
-                    //這邊拼湊轉回來的地址
-                    print(placeMark ?? "")
-                    self.PlaceMark = placeMark!
-                }
-        })
     }
     
     override func viewDidLoad() {
@@ -127,15 +99,15 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
         titleTextField.delegate         = self
         longitudeTextField.delegate     = self
         latitudeTextField.delegate      = self
-        subjectTextField.delegate       = self
-        typeTextField.delegate          = self
+        //subjectTextField.delegate       = self
+        //typeTextField.delegate          = self
         formatTextField.delegate        = self
         keywordTextField.delegate       = self
         descriptionTextField.delegate   = self
         groupTextField.delegate         = self
         
-        subjectTextField.text = subjectOption[0]
-        typeTextField.text = typeOption[0]
+//        subjectTextField.text = subjectOption[0]
+//        typeTextField.text = typeOption[0]
         formatTextField.text = formatOption[0]
         groupTextField.text = groupOption[0]
         
@@ -152,16 +124,16 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
         
         
         // 配置 PickerView
-        subjectPickerView.delegate = self
-        subjectPickerView.dataSource = self
-        subjectPickerView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        subjectTextField.inputView = subjectPickerView
-        subjectTextField.tag = 100
-        typePickerView.delegate = self
-        typePickerView.dataSource = self
-        typePickerView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
-        typeTextField.inputView = typePickerView
-        typeTextField.tag = 100
+//        subjectPickerView.delegate = self
+//        subjectPickerView.dataSource = self
+//        subjectPickerView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+//        subjectTextField.inputView = subjectPickerView
+//        subjectTextField.tag = 100
+//        typePickerView.delegate = self
+//        typePickerView.dataSource = self
+//        typePickerView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+//        typeTextField.inputView = typePickerView
+//        typeTextField.tag = 100
         formatPickerView.delegate = self
         formatPickerView.dataSource = self
         formatPickerView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
@@ -183,8 +155,8 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
             titleTextField.text = POIitem.POI_title
             longitudeTextField.text = POIitem.POI_longitude
             latitudeTextField.text = POIitem.POI_latitude
-            subjectTextField.text = POIitem.POI_subject
-            typeTextField.text = POIitem.POI_type
+            //subjectTextField.text = "Activation and Reconstructed"
+            //typeTextField.text = "Natural Landscape"
             formatTextField.text = POIitem.POI_format
             keywordTextField.text = POIitem.POI_keyword
             descriptionTextField.text = POIitem.POI_description
@@ -200,11 +172,11 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
                 print(statement)
                 while sqlite3_step(statement) == SQLITE_ROW {
                     let media_set = String(cString: sqlite3_column_text(statement, 2))
-                    let temp = String(cString: sqlite3_column_text(statement, 3))
-                    
+                    let temp = "." + String(cString: sqlite3_column_text(statement, 3))
+                    print(temp,"......")
                     if media_set == "1" {
                         photoUrl.append(temp)
-                        let imageFromPath = UIImage(contentsOfFile: temp)!
+                        let imageFromPath = UIImage(contentsOfFile: temp) ?? UIImage()
                         photoArray.append(imageFromPath)
                     } else if media_set == "8" {
                         audioPathURL = temp
@@ -229,6 +201,7 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
         if audioPathURL != "" {
             playnarratorNuttonView.isHidden = false
         }
+        
     }
     
     @IBAction func getLocationBarButton(_ sender: UIBarButtonItem) {
@@ -237,12 +210,14 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
         
             UIApplication.shared.beginIgnoringInteractionEvents()
             locationManager.requestLocation()
+            
         } else if (CLLocationManager.authorizationStatus() == .denied) {
             let AlertController = UIAlertController(title: NSLocalizedString("Ｗarning", comment: ""), message: NSLocalizedString("Our App need the location service.\nTo change the permissions, go to Settings> DEH Make II> Location Services ON!", comment: ""), preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction) in
                 print("back")
             })
             AlertController.addAction(okAction)
+            
             self.present(AlertController, animated: true, completion: nil)
         }
     }
@@ -356,8 +331,8 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
         let latitude = "'" + latitudeTextField.text! + "'"
         let longitude = "'" + longitudeTextField.text! + "'"
         let description = "'" + descriptionTextField.text! + "'"
-        let subject = "'" + subjectTextField.text! + "'"
-        let type = "'" + typeTextField.text! + "'"
+        let subject = "'" + "Activation and Reconstructed" + "'"
+        let type = "'" + "Natural Landscape" + "'"
         let keyword = "'" + keywordTextField.text! + "'"
         let format = "'" + formatTextField.text! + "'"
         let address = "'" + PlaceMark + "'"
@@ -511,8 +486,8 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
             titleTextField.text = ""
             longitudeTextField.text = ""
             latitudeTextField.text = ""
-            subjectTextField.text = ""
-            typeTextField.text = ""
+            //subjectTextField.text = "Activation and Reconstructed"
+            //typeTextField.text = "Natural Landscape"
             formatTextField.text = ""
             keywordTextField.text = ""
             descriptionTextField.text = ""
@@ -663,11 +638,17 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         var string = "myString"
         // 將 string 的值更新為陣列 sub/type/for 的第 row 項資料
-        if (pickerView == subjectPickerView){
-            string = subjectOption[row]
-        } else if (pickerView == typePickerView){
-            string = typeOption[row]
-        } else if (pickerView == formatPickerView){
+//        if (pickerView == subjectPickerView){
+//            string = subjectOption[row]
+//        } else if (pickerView == typePickerView){
+//            string = typeOption[row]
+//        } else if (pickerView == formatPickerView){
+//            string = formatOption[row]
+//        } else {
+//            string = groupOption[row]
+//        }
+        
+        if (pickerView == formatPickerView){
             string = formatOption[row]
         } else {
             string = groupOption[row]
@@ -678,11 +659,7 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
     
     // UIPickerView 設定欄位數量
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if (pickerView == subjectPickerView){
-            return subjectOption.count
-        } else if (pickerView == typePickerView){
-            return typeOption.count
-        } else if (pickerView == formatPickerView) {
+        if (pickerView == formatPickerView) {
             return formatOption.count
         } else {
             return groupOption.count
@@ -692,11 +669,17 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
     // UIPickerView 改變選擇後執行的動作
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // 將 UITextField 的值更新為陣列 meals 的第 row 項資料
-        if (pickerView == subjectPickerView){
-            subjectTextField.text = subjectOption[row]
-        } else if (pickerView == typePickerView){
-            typeTextField.text = typeOption[row]
-        } else if (pickerView == formatPickerView) {
+//        if (pickerView == subjectPickerView){
+//            subjectTextField.text = subjectOption[row]
+//        } else if (pickerView == typePickerView){
+//            typeTextField.text = typeOption[row]
+//        } else if (pickerView == formatPickerView) {
+//            formatTextField.text = formatOption[row]
+//        } else {
+//            groupTextField.text = groupOption[row]
+//        }
+        
+        if (pickerView == formatPickerView) {
             formatTextField.text = formatOption[row]
         } else {
             groupTextField.text = groupOption[row]
@@ -719,7 +702,35 @@ class NewImagePOIViewController: UIViewController, UIScrollViewDelegate, UIPicke
             let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action: UIAlertAction) in
                 print(self.PlaceMark)
             })
-            
+            let geoCoder = CLGeocoder()
+            let currentLocation = CLLocation(
+                latitude: (latitudeTextField.text! as NSString).doubleValue,
+                longitude: (longitudeTextField.text! as NSString).doubleValue
+            )
+
+            geoCoder.reverseGeocodeLocation(
+                currentLocation, completionHandler: {
+                    (placemarks, error) -> Void in
+                    if error != nil {
+                        print("ERROR")
+                        return
+                    }
+                    /*  name            街道地址
+                     *  country         國家
+                     *  province        省籍
+                     *  locality        城市
+                     *  sublocality     縣市、區
+                     *  route           街道、路名
+                     *  streetNumber    門牌號碼
+                     *  postalCode      郵遞區號
+                     */
+                    if placemarks != nil && (placemarks?.count)! > 0{
+                        let placeMark = placemarks?[0].name
+                        //這邊拼湊轉回來的地址
+                        print(placeMark ?? "")
+                        self.PlaceMark = placeMark!
+                    }
+            })
             locationAlert.addAction(okAction)
             present(locationAlert, animated: true, completion: nil)
         }

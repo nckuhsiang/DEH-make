@@ -1,6 +1,6 @@
 /* 
   Localizable.strings
-  UItest1010
+  DEH-Make-II
 
   Created by Ray Chen on 2017/11/14.
   Copyright © 2017年 Ray Chen. All rights reserved.
@@ -85,6 +85,8 @@
 "Group Name" = "群組名稱";
 "Myself" = "屬於自己";
 "JOIN" = "申請加入";
+"Join" = "申請加入";
+"Yes" = "同意";
 "Edit" = "編輯";
 "Creat" = "建立";
 "Save" = "儲存";
@@ -124,6 +126,27 @@
 "Antique" = "古物";
 "Food and Drink, Lodging, Transportation, Infotainment" = "食衣住行育樂";
 "Other" = "其他";
+
+/* Format */
+"古蹟" = "古蹟";
+"歷史建築" = "歷史建築";
+"紀念建築" = "紀念建築";
+"考古遺址" = "考古遺址";
+"史蹟" = "史蹟";
+"文化景觀" = "文化景觀";
+"古物" = "古物";
+"自然景觀" = "自然景觀";
+"傳統表演藝術" = "傳統表演藝術";
+"傳統工藝" = "傳統工藝";
+"口述傳統" = "口述傳統";
+"民俗" = "民俗";
+"傳統知識與實踐" = "傳統知識與實踐";
+"一般景觀（建築/人工地景/自然地景）" = "一般景觀（建築/人工地景/自然地景）";
+"植物" = "植物";
+"動物" = "動物";
+"生物" = "生物";
+"食衣住行育樂" = "食衣住行育樂";
+"其他" = "其他";
 
 /* Page View */
 "DEH Make's Homepage" = "DEH Make的首頁";

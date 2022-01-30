@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  UItest1010
+//  DEH-Make-II
 //
 //  Created by Ray Chen on 2017/10/10.
 //  Copyright © 2017年 Ray Chen. All rights reserved.
@@ -21,13 +21,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var db :SQLiteConnect?
     var item : POIClass!
     var itemSource : [POIClass] = []
-    let JsonHelp = JSONhelper()
+//    let JsonHelp = JSONhelper()
     
     @IBOutlet weak var POITableView: UITableView!
-    
+//MARK: - 確認語言＆顯示尚未上傳的景點
     override func viewWillAppear(_ animated: Bool) {
         itemSource.removeAll(keepingCapacity: true)
-        let Language = String(Locale.current.identifier.characters.split(separator: "_").first!)
+        let Language = String(Locale.current.identifier.split(separator: "_").first!)
         
         if (UserDefaults.standard.bool(forKey: "first")){
             print(UserDefaults.standard.bool(forKey: "first"))
@@ -39,16 +39,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if Language == "zh"{
             LanguageChange = "中文"
-            language = "中文"
+            UserDefaults.standard.set("中文", forKey: "language")
         }else if Language == "en"{
             LanguageChange = "英文"
-            language = "英文"
+            UserDefaults.standard.set("英文", forKey: "language")
         }else if Language == "ja"{
             LanguageChange = "日文"
-            language = "日文"
+            UserDefaults.standard.set("日文", forKey: "language")
         }else{
             LanguageChange = "中文"
-            language = "中文"
+            UserDefaults.standard.set("中文", forKey: "language")
         }
         
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let POI_keyword = String(cString: sqlite3_column_text(statement, 7))
                 let POI_address = String(cString: sqlite3_column_text(statement, 18))
                 let POI_period = "現代台灣"
-                let POI_year = 2018
+                let POI_year = Calendar.current.component(.year, from: Date())
                 let POI_height = ""
                 let POI_scope = ""
                 let POI_format = String(cString: sqlite3_column_text(statement, 12))
@@ -92,6 +92,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         checkLogin()
     }
+    //MARK: - 本地登入確認 用UserDefault
+    //新增COIname儲存
     
     func checkLogin(){
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -101,8 +103,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let mydb = db {
             let statement = mydb.fetch("UserInfo", cond: "1 == 1", order: nil)
             while sqlite3_step(statement) == SQLITE_ROW{
-                Rights = String(cString: sqlite3_column_text(statement, 1))
-                Identifier = String(cString: sqlite3_column_text(statement, 3))
+                Rights = UserDefaults.standard.value(forKey: "username") as? String ?? ""
+                COIname = UserDefaults.standard.value(forKey: "COIname") as? String ?? ""
+                Identifier = UserDefaults.standard.value(forKey: "Identifier") as? String ?? ""
+
             }
         }
     }
@@ -112,6 +116,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         POITableView.delegate = self
         POITableView.dataSource = self
+
+        
+//        testlink()
+        
         
         // Do any additional setup after loading the view, typically from a nib.
         grantToken()
@@ -248,12 +256,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: NSLocalizedString("Delete", comment: "")) { (action, indexPath) in
+        // modify #next line to _
+        //MARK: - 設定上傳/刪除按鈕
+        let delete = UITableViewRowAction(style: .destructive, title: NSLocalizedString("Delete", comment: "")) { (_, indexPath) in
+            //語法糖 尾隨閉包
             // Delete the row from the data source
             let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
             let sqlitePath = urls[urls.count-1].absoluteString + "sqlite3.db"
             let itemDelete = self.itemSource[indexPath.row]
-            
+//            print("iamhere")
             let id = itemDelete.id
             //let title = itemDelete.POI_title
             
@@ -373,7 +384,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 }
 
                 let parameters = ["content": json.description]
-
+                
                 Alamofire.upload(
                     multipartFormData: { multipartFormData in
                         for i in 0 ..< json["media_set"].count{
@@ -418,9 +429,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
                         for (key, value) in parameters {
                             print(value)
-                            multipartFormData.append(value.data(using: .utf8)!, withName: key)
+                            multipartFormData.append(value.data(using: .utf8) ?? Data(), withName: key)
+                            print(multipartFormData)
                         }
-
+                        //MARK: 上傳後以回傳值後分析成功/失敗
                 }, usingThreshold: SessionManager.multipartFormDataEncodingMemoryThreshold, to: UploadPOIUrl, method: .post, headers: ["Authorization": "Token " + SuperToken], encodingCompletion: { encodingResult in
                         switch encodingResult {
                         case .success(let upload, _, _):
@@ -521,5 +533,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         shareInterestController.excludedActivityTypes = [UIActivityType.mail, UIActivityType.message]
         self.present(shareInterestController, animated: true, completion: nil)
     }
+    func testlink()
+    {
+        
+        var json2: JSON
+        do {
+            json2 = try JSON(data: "{}".data(using: String.Encoding.utf8)!)
+        } catch _ {
+            json2 = JSON("")
+        }
+
+        json2["coi_name"] = JSON("deh")
+        json2["user_name"] = JSON("et00")
+//        let parameters = ["member_info": json2.description ]
+        let parameters = json2.dictionaryValue
+        Alamofire.request(GroupGetListUrl, method: .post, parameters: parameters).responseJSON{ response in
+            if let value: AnyObject = response.result.value as AnyObject? {
+                let post = JSON(value)
+                let result = post["result"].array ?? []
+                print(post)
+                for i in 0..<result.count {
+
+                }
+            }
+        }
+        
+        
+    }
 }
 
+    

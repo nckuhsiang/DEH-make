@@ -1,13 +1,13 @@
 //
 //  PageViewController.swift
-//  UItest1010
+//  DEH-Make-II
 //
 //  Created by Ray Chen on 2017/12/28.
 //  Copyright © 2017年 Ray Chen. All rights reserved.
 //
 
 import UIKit
-
+//MARK: 好像是導覽頁
 class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     var pageHeading = [
         NSLocalizedString("DEH Make's Homepage", comment: ""),

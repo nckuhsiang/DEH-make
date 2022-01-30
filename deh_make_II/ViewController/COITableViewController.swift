@@ -1,6 +1,6 @@
 //
 //  COITableViewController.swift
-//  UItest1010
+//  DEH-Make-II
 //
 //  Created by Ray Chen on 2018/7/14.
 //  Copyright © 2018年 Ray Chen. All rights reserved.
@@ -36,16 +36,19 @@ class COITableViewController: UITableViewController {
     func getCOIInfo(){
         COIList = []
         COIList.append("deh")
+//        COIList.append("extn")
+//        COIList.append("sdc")
         Alamofire.request(GetCOIListUrl, method: .get).responseJSON{ response in
             print("Get COI Info. Request!")
             if let value: AnyObject = response.result.value as AnyObject? {
-                
+
                 let post = JSON(value)
                 let result = post["result"].array ?? []
                 for i in 0..<result.count {
                     let coi_name = result[i]["coi_name"].string ?? ""
-                    
+
                     self.COIList.append(coi_name)
+                    print(coi_name)
                 }
             }
             self.COIListTableView.reloadData()
@@ -75,9 +78,15 @@ class COITableViewController: UITableViewController {
         if COIList[indexPath.row] == "deh" {
             Coicell.textLabel?.text = "DEH 文史脈流"
             Coicell.imageView?.image = UIImage(named: "deh_icon")
+            print("deh")
         } else if COIList[indexPath.row] == "extn" {
-            Coicell.textLabel?.text = "NCKU 踏溯台南"
+            Coicell.textLabel?.text = "EXTN 踏溯台南"
             Coicell.imageView?.image = UIImage(named: "extn_icon")
+            print("extn")
+        } else if COIList[indexPath.row] == "sdc" {
+            Coicell.textLabel?.text = "SDC 校本課程"
+            Coicell.imageView?.image = UIImage(named: "sdc_icon")
+            print("sdc")
         } else {
             Coicell.textLabel?.text = COIList[indexPath.row]
             Coicell.imageView?.image = UIImage(named: "deh_icon")
@@ -87,10 +96,12 @@ class COITableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         COIname = COIList[indexPath.row]
+        UserDefaults.standard.set(COIname,forKey: "COIname")
         
         tableView.cellForRow(at: selecedCOI)?.accessoryType = .none
-        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark//?
         selecedCOI = indexPath
+        print(selecedCOI)
         self.navigationController?.popViewController(animated: true)
     }
     /*

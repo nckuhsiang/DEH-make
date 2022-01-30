@@ -1,13 +1,12 @@
 //
 //  UserLogingViewController.swift
-//  UItest1010
+//  DEH-Make-II
 //
 //  Created by Ray Chen on 2017/10/30.
 //  Copyright © 2017年 Ray Chen. All rights reserved.
 //
 
 import UIKit
-import IDZSwiftCommonCrypto
 import CommonCrypto
 import Alamofire
 import SwiftyJSON
@@ -23,14 +22,14 @@ class UserLogingViewController: UIViewController, UITextFieldDelegate, SFSafariV
     @IBOutlet weak var loginButtonView: UIButton!
     @IBOutlet weak var coiiconImageView: UIImageView!
     @IBOutlet weak var coinameTextField: UILabel!
-    
+    //MARK: - 以網頁註冊
     @IBAction func registActionButton(_ sender: UIButton) {
         let svc = SFSafariViewController(url: URL(string: UserRegistUrl)!)
         
         svc.delegate = self
         self.present(svc, animated: true, completion: nil)
     }
-    
+    //MARK: - 登入登出按鈕
     @IBAction func loginActionButton(_ sender: UIButton) {
         var UserPassword = passwordTextField!.text!
         let UserName = usernameTextField!.text!
@@ -42,14 +41,17 @@ class UserLogingViewController: UIViewController, UITextFieldDelegate, SFSafariV
             logCheck(userName: UserName, passWord: UserPassword, token: SuperToken)
         }
     }
-    
+    //MARK: - “更多”按鈕
     @IBAction func moreInfoOfDEH(_ sender: UIButton) {
         var homePageUrl : String = ""
         if COIname == "deh" {
             homePageUrl = DEHHomePageUrl
         } else if COIname == "extn" {
             homePageUrl = ExpTainanHomePageUrl
-        } else {
+        } else if COIname == "sdc" {
+            homePageUrl = SDCHomePageUrl
+        }
+        else {
             homePageUrl = DEHHomePageUrl
         }
         
@@ -58,7 +60,7 @@ class UserLogingViewController: UIViewController, UITextFieldDelegate, SFSafariV
         svc.delegate = self
         self.present(svc, animated: true, completion: nil)
     }
-    
+    //MARK: - 更換景點歸屬
     @IBAction func changeCOIButtonAction(_ sender: UIButton) {
         let changeCOIalert = UIAlertController(title: NSLocalizedString("Warn", comment: ""), message: NSLocalizedString("If you switch the attraction, you will log out of the current account.", comment: ""), preferredStyle: .alert)
         let okAction = UIAlertAction(
@@ -76,7 +78,7 @@ class UserLogingViewController: UIViewController, UITextFieldDelegate, SFSafariV
         
         changeCOIalert.addAction(cancelAction)
         changeCOIalert.addAction(okAction)
-        
+        //MARK: - 關注一下
         if UserHadLogin {
             self.present(changeCOIalert, animated: true, completion: nil)
         } else {
@@ -95,6 +97,9 @@ class UserLogingViewController: UIViewController, UITextFieldDelegate, SFSafariV
             } else if COIname == "extn" {
                 coinameTextField.text = "踏溯台南"
                 coiiconImageView.image = UIImage(named: "extn_icon")
+            } else if COIname == "sdc" {
+                coinameTextField.text = "校本課程"
+                coiiconImageView.image = UIImage(named: "sdc_icon")
             } else {
                 coinameTextField.text = "文史脈流"
                 coiiconImageView.image = UIImage(named: "deh_icon")
@@ -114,6 +119,8 @@ class UserLogingViewController: UIViewController, UITextFieldDelegate, SFSafariV
             passwordTextField.text = "********"
             loginButtonView.setTitle(NSLocalizedString("Logout", comment: ""), for: UIControlState())
         }
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -137,9 +144,14 @@ class UserLogingViewController: UIViewController, UITextFieldDelegate, SFSafariV
         }
         usernameTextField.text = ""
         passwordTextField.text = ""
+        //UserDefaults.standard.removeObject(forKey: "COIname")
         loginButtonView.setTitle(NSLocalizedString("Login", comment: ""), for: UIControlState())
         Rights = ""
+        UserDefaults.standard.set("",forKey: "username")
         Identifier = ""
+        UserDefaults.standard.set("",forKey: "Identifier")
+        
+        
         UserHadLogin = false
     }
     
@@ -152,7 +164,8 @@ class UserLogingViewController: UIViewController, UITextFieldDelegate, SFSafariV
         let length = Int(CC_MD5_DIGEST_LENGTH)
         var digest = [UInt8](repeating: 0, count: length)
         if let d = string.data(using: String.Encoding.utf8) {
-            d.withUnsafeBytes { (body: UnsafePointer<UInt8>) in
+            _ = d.withUnsafeBytes { (body: UnsafePointer<UInt8>) in
+                //警告修正：忽略回傳值
                 CC_MD5(body, CC_LONG(d.count), &digest)
             }
         }
@@ -176,7 +189,9 @@ class UserLogingViewController: UIViewController, UITextFieldDelegate, SFSafariV
                     self.loginButtonView.setTitle(NSLocalizedString("Logout", comment: ""), for: UIControlState())
                     
                     Rights = post["username"].string!
+                    UserDefaults.standard.set(Rights, forKey: "username")
                     Identifier = post["role"].string!
+                    UserDefaults.standard.set(Identifier, forKey: "Identifier")
                     UserHadLogin = true
                     
                     let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)

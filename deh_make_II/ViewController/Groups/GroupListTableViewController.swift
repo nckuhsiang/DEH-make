@@ -17,6 +17,12 @@ class GroupListTableViewController: UITableViewController, UISearchResultsUpdati
     var searchController: UISearchController!
     var isShowResult : Bool = false
     var searchedGroup :[String] = []
+    let parameters = [
+       "username": UserDefaults.standard.value(forKey: "username") as? String ?? "",
+       "language": UserDefaults.standard.value(forKey: "language") as? String ?? "",
+       "coi_name": UserDefaults.standard.value(forKey: "COIname") as? String ?? ""]
+      
+    
     
     //MARK:-
     override func viewDidLoad() {
@@ -221,8 +227,8 @@ class GroupListTableViewController: UITableViewController, UISearchResultsUpdati
         json2 = JSON("")
     }
     
-    json2["coi_name"] = JSON(COIname)
-    json2["user_name"] = JSON(Rights)
+    json2["coi_name"] = JSON(parameters["coi_name"] ?? "")
+    json2["user_name"] = JSON(parameters["username"] ?? "")
     //        let parameters = ["member_info": json2.description ]
     let parameters = json2.dictionaryValue
     Alamofire.request(GroupGetListUrl, method: .post, parameters: parameters).responseJSON{ response in
@@ -256,7 +262,7 @@ class GroupListTableViewController: UITableViewController, UISearchResultsUpdati
             json = JSON("")
         }
         
-        json["sender_name"] = JSON(Rights)
+        json["sender_name"] = JSON(parameters["username"] ?? "")
         json["group_name"] = JSON(groupName)
         let parameters = ["join_info": json.description ]
         

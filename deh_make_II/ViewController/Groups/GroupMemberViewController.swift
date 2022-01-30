@@ -23,6 +23,13 @@ class GroupMemberViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var addUsernameTextField: UITextField!
     @IBOutlet weak var groupMemberListTable: UITableView!
     
+    let parameters = [
+    "username": UserDefaults.standard.value(forKey: "username") as? String ?? "",
+    "language": UserDefaults.standard.value(forKey: "language") as? String ?? "",
+    "coi_name": UserDefaults.standard.value(forKey: "COIname") as? String ?? ""]
+    
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -86,7 +93,7 @@ class GroupMemberViewController: UIViewController, UITableViewDataSource, UITabl
             json = JSON("")
         }
         //var json = try JSON(data: "{}".data(using: String.Encoding.utf8)!)
-        json["sender_name"] = JSON(Rights)
+        json["sender_name"] = JSON(parameters["username"] ?? "")
         json["receiver_name"] = JSON(addUsernameTextField.text ?? "")
         if GroupItem != nil {
             json["group_id"] = JSON(GroupItem.id)
@@ -94,7 +101,7 @@ class GroupMemberViewController: UIViewController, UITableViewDataSource, UITabl
             json["group_id"] = JSON(group_ID)
         }
         json["message_type"] = JSON("Invite")
-        json["coi_name"] = JSON(COIname)
+        json["coi_name"] = JSON(parameters["coi_name"] ?? "")
         
         let parameters = ["group_message_info": json.description ]
         
@@ -138,14 +145,14 @@ class GroupMemberViewController: UIViewController, UITableViewDataSource, UITabl
             json = JSON("")
         }
         //var json = JSON(data: "{}".data(using: String.Encoding.utf8)!)
-        json["username"] = JSON(Rights)
+        json["username"] = JSON(parameters["username"] ?? "")
         
         if GroupItem != nil {
             json["group_id"] = JSON(GroupItem.id)
         } else {
             json["group_id"] = JSON(group_ID)
         }
-        json["coi_name"] = JSON(COIname)
+        json["coi_name"] = JSON(parameters["coi_name"] ?? "")
         
         let parameters = ["member_info": json.description ]
         

@@ -1,6 +1,6 @@
 //
 //  GroupClassType.swift
-//  UItest1010
+//  DEH-Make-II
 //
 //  Created by Ray Chen on 2017/11/30.
 //  Copyright © 2017年 Ray Chen. All rights reserved.
@@ -37,6 +37,16 @@ class GroupClass: NSObject {
 }
 
 class GrouopMemberClass: NSObject {
+    var name: String
+    var identifier: String
+    
+    init(name: String, identifier: String){
+        self.name = name
+        self.identifier = identifier
+    }
+}
+
+class GroupListClass: NSObject {
     var name: String
     var identifier: String
     

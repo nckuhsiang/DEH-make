@@ -10,12 +10,16 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-var language = "中文"
-
 class GroupInfoViewController: UIViewController, UITextFieldDelegate {
     var GroupItem: GroupClass!
     var isAddingGroupInfo = true
     var action = "creat"
+    
+    let parameters = [
+    "username": UserDefaults.standard.value(forKey: "username") as? String ?? "",
+    "language": UserDefaults.standard.value(forKey: "language") as? String ?? "",
+    "coi_name": UserDefaults.standard.value(forKey: "COIname") as? String ?? ""]
+    
     
     @IBOutlet weak var groupNameTextField: UITextField!
     @IBOutlet weak var groupInfoTextField: UITextField!
@@ -25,8 +29,8 @@ class GroupInfoViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         groupNameTextField.isUserInteractionEnabled = false
-        groupInfoTextField.isUserInteractionEnabled = false
         groupNameTextField.delegate = self
+        groupInfoTextField.isUserInteractionEnabled = false
         groupInfoTextField.delegate = self
         
         if !isAddingGroupInfo {
@@ -76,12 +80,12 @@ class GroupInfoViewController: UIViewController, UITextFieldDelegate {
                 }
                 
                 json["group_name"] = JSON(groupNameTextField.text ?? "")
-                json["group_leader_name"] = JSON(Rights)
+                json["group_leader_name"] = JSON(parameters["username"] ?? "")
                 json["group_info"] = JSON(groupInfoTextField.text ?? "")
-                json["language"] = JSON(LanguageChange)
+                json["language"] = JSON(parameters["language"] ?? "")
                 json["verification"] = JSON("0")
                 json["open"] = JSON("1")
-                json["coi_name"] = JSON(COIname)
+                json["coi_name"] = JSON(parameters["coi_name"] ?? "")
                 let parameters = ["group_information": json.description ]
                 
                 Alamofire.request(GroupCreatUrl, method: .post, parameters: parameters).responseJSON{ response in

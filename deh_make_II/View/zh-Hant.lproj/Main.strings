@@ -194,7 +194,7 @@
 /* Class = "UIBarButtonItem"; title = "User info"; ObjectID = "oed-pk-bZD"; */
 "oed-pk-bZD.title" = "User info";
 
-/* Class = "UIViewController"; title = "Vedio POI"; ObjectID = "p8c-vs-s6g"; */
+/* Class = "UIViewController"; title = "Video POI"; ObjectID = "p8c-vs-s6g"; */
 "p8c-vs-s6g.title" = "影片景點";
 
 /* Class = "UITextField"; placeholder = "請選擇景點類型"; ObjectID = "pxz-dO-WRv"; */
